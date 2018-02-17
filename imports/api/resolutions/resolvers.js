@@ -1,16 +1,13 @@
+import Resolutions from './resolutions';
+
+// Resolutions.insert({
+//   name: 'Test res',
+// });
+
 export default {
   Query: {
     resolutions() {
-      return [
-        {
-          _id: '12345',
-          name: 'Eat 🍕',
-        },
-        {
-          _id: '35472',
-          name: 'Become vibe addict',
-        },
-      ];
+      return Resolutions.find({}).fetch();
     },
   },
 };
